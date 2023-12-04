@@ -90,7 +90,7 @@ const LecturersEdit = () => {
 
     
 
-    if(!lecturer) return <h3>Lecturer not found</h3>
+    if(!lecturer) return( <div className="flex justify-center items-center h-screen"><span className="loading loading-spinner text-primary"></span></div>);
 
     return (
         <div>

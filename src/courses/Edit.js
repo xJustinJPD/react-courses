@@ -91,7 +91,7 @@ const Edit = () => {
 
     
 
-    if(!course) return <h3>Course not found</h3>
+    if(!course) return( <div className="flex justify-center items-center h-screen"><span className="loading loading-spinner text-primary"></span></div>);
 
     return (
         <div>

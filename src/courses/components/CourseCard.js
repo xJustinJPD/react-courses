@@ -10,8 +10,8 @@ const CourseCard = ({course}) => {
             {course.title} <p><b>{course.code}</b></p>
             </div>
             <div className="collapse-content bg-neutral text-neutral-content peer-checked:bg-neutral peer-checked:text-neutral-content"> 
-            <p><b>Points:</b>{course.points} / <b>Level:</b>{course.level}</p> 
-            <Link to={`/courses/${course.id}`}><button className="btn btn-outline btn-primary mt-1">More</button></Link>
+            <p><b>Points: </b>{course.points} / <b>Level: </b>{course.level}</p> 
+            <Link to={`/courses/${course.id}`}><button className="btn btn-outline btn-primary mt-5">More</button></Link>
             </div>
             </div>
         </>

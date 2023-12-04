@@ -28,7 +28,7 @@ const Show = () => {
         })
     },[id]);
 
-    if(!course) return <h3>Course Not Found</h3>
+    if(!course) return( <div className="flex justify-center items-center h-screen"><span className="loading loading-spinner text-primary"></span></div>);
 
     return (
     <>
