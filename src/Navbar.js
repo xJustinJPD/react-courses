@@ -1,6 +1,16 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from './contexts/AuthContexts';
 
 const Navbar = () => {
+    const { authenticated, onAuthenticated } = useAuth();
+
+    const navigate = useNavigate();
+
+    const logout = () => {
+        onAuthenticated(false);
+        navigate('/login');
+    }
+
     return (
             <div className="navbar bg-neutral">
             <div className="navbar-start">
@@ -14,6 +24,8 @@ const Navbar = () => {
                 <li><Link to='/enrolments'>Enrolments</Link></li>
                 <li><Link to='/courses/create'>Create Courses</Link></li>
                 <li><Link to='/lecturers/create'>Create Lecturers</Link></li>
+                <li><Link to='/enrolments/create'>Create Enrolments</Link></li>
+
                 </ul>
             </div>
             </div>
@@ -30,6 +42,9 @@ const Navbar = () => {
                 <span className="badge badge-xs badge-primary indicator-item"></span>
                 </div>
             </button> */}
+                            {(authenticated) ? (
+                <button onClick={logout}>Logout</button>
+                ) : ""}
             </div>
                     </div>
     );

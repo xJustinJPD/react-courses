@@ -8,6 +8,7 @@ const EnrolmentCard = ({enrolment}) => {
 	return (
             <div className="card w-96 bg-neutral text-neutral-content">
     <div className="card-body items-center text-center">
+        <p>Enrolment Number: {enrolment.id}</p>
         <p>{enrolment.date}</p>
         <p>{enrolment.time}</p>
         <p>{enrolment.status}</p>
